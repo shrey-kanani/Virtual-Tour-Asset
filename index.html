@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Painter</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <!-- Left Side: Image Section -->
+    <div class="image-section">
+      <img id="layer0" src="./Main/PEB-Base.png" alt="Building Image">
+      <img id="WsheetToSwap" src="https://zamilsteel.co.in/img/vp/wsheeting-0.png">
+      <img id="RsheetToSwap" src="https://zamilsteel.co.in/img/vp/rsheeting-0.png">
+      <img id="crs" src="https://zamilsteel.co.in/img/vp/crs-0.png">
+      <img id="csheet" src="https://zamilsteel.co.in/img/vp/csheet-0.png">
+      <img id="downspouts" src="https://zamilsteel.co.in/img/vp/downspouts-0.png">
+      <img id="louvers" src="https://zamilsteel.co.in/img/vp/louvers-0.png">
+      <img id="roofms" src="https://zamilsteel.co.in/img/vp/roofms-0.png">
+      <img id="rvent" src="https://zamilsteel.co.in/img/vp/rvent-0.png">
+      <img id="shutter" src="https://zamilsteel.co.in/img/vp/shutter-0.png">
+    </div>
+
+    <!-- Right Side: Dropdown Section -->
+    <div class="options-section">
+      <h2 class="heading">Color Options</h2>
+
+      <label for="wall-sheeting">Wall Sheeting</label>
+      <select id="wall-sheeting">
+        <option>--</option>
+        <option value="https://zamilsteel.co.in/img/vp/wsheeting-1.png">Light Green</option>
+        <option value="https://zamilsteel.co.in/img/vp/wsheeting-2.png">Green</option>
+        <option value="https://zamilsteel.co.in/img/vp/wsheeting-3.png">White</option>
+        <option value="https://zamilsteel.co.in/img/vp/wsheeting-4.png">Parrot Green</option>
+        <option value="https://zamilsteel.co.in/img/vp/wsheeting-5.png">Cyan</option>
+        <option value="https://zamilsteel.co.in/img/vp/wsheeting-6.png">Red</option>
+        <option value="https://zamilsteel.co.in/img/vp/wsheeting-7.png">Blue</option>
+        <option value="https://zamilsteel.co.in/img/vp/wsheeting-8.png">Z Blue</option>
+        <option value="https://zamilsteel.co.in/img/vp/wsheeting-9.png">White</option>
+      </select>
+
+      <label for="roof-sheeting">Roof Sheeting</label>
+      <select id="roof-sheeting">
+        <option>--</option>
+        <option value="https://zamilsteel.co.in/img/vp/rsheeting-1.png">Light Green</option>
+        <option value="https://zamilsteel.co.in/img/vp/rsheeting-2.png">Green</option>
+        <option value="https://zamilsteel.co.in/img/vp/rsheeting-3.png">White</option>
+        <option value="https://zamilsteel.co.in/img/vp/rsheeting-4.png">Parrot Green</option>
+        <option value="https://zamilsteel.co.in/img/vp/rsheeting-5.png">Cyan</option>
+        <option value="https://zamilsteel.co.in/img/vp/rsheeting-6.png">Red</option>
+        <option value="https://zamilsteel.co.in/img/vp/rsheeting-7.png">Dark Blue</option>
+        <option value="https://zamilsteel.co.in/img/vp/rsheeting-8.png">Blue</option>
+      </select>
+
+      <label for="crs-selection">CRS</label>
+      <select id="crs-selection">
+        <option>--</option>
+        <option value="https://zamilsteel.co.in/img/vp/crs-1.png">Light Green</option>
+        <option value="https://zamilsteel.co.in/img/vp/crs-2.png">Green</option>
+        <option value="https://zamilsteel.co.in/img/vp/crs-3.png">White</option>
+        <option value="https://zamilsteel.co.in/img/vp/crs-4.png">Parrot Green</option>
+        <option value="https://zamilsteel.co.in/img/vp/crs-5.png">Cyan</option>
+        <option value="https://zamilsteel.co.in/img/vp/crs-6.png">Red</option>
+        <option value="https://zamilsteel.co.in/img/vp/crs-7.png">Dark Blue</option>
+        <option value="https://zamilsteel.co.in/img/vp/crs-8.png">Blue</option>
+      </select>
+
+      <label for="csheet-selection">C Sheet</label>
+      <select id="csheet-selection">
+        <option>--</option>
+        <option value="https://zamilsteel.co.in/img/vp/csheet-1.png">Light Green</option>
+        <option value="https://zamilsteel.co.in/img/vp/csheet-2.png">Green</option>
+        <option value="https://zamilsteel.co.in/img/vp/csheet-3.png">White</option>
+        <option value="https://zamilsteel.co.in/img/vp/csheet-4.png">Parrot Green</option>
+        <option value="https://zamilsteel.co.in/img/vp/csheet-5.png">Cyan</option>
+        <option value="https://zamilsteel.co.in/img/vp/csheet-6.png">Red</option>
+        <option value="https://zamilsteel.co.in/img/vp/csheet-7.png">Dark Blue</option>
+        <option value="https://zamilsteel.co.in/img/vp/csheet-8.png">Blue</option>
+      </select>
+
+      <label for="downspouts-selection">Downspouts</label>
+      <select id="downspouts-selection">
+        <option>--</option>
+        <option value="https://zamilsteel.co.in/img/vp/downspouts-1.png">Light Green</option>
+        <option value="https://zamilsteel.co.in/img/vp/downspouts-2.png">Green</option>
+        <option value="https://zamilsteel.co.in/img/vp/downspouts-3.png">White</option>
+        <option value="https://zamilsteel.co.in/img/vp/downspouts-4.png">Parrot Green</option>
+        <option value="https://zamilsteel.co.in/img/vp/downspouts-5.png">Cyan</option>
+        <option value="https://zamilsteel.co.in/img/vp/downspouts-6.png">Red</option>
+        <option value="https://zamilsteel.co.in/img/vp/downspouts-7.png">Dark Blue</option>
+        <option value="https://zamilsteel.co.in/img/vp/downspouts-8.png">Blue</option>
+      </select>
+
+      <label for="louvers-selection">Louvers</label>
+      <select id="louvers-selection">
+        <option>--</option>
+        <option value="https://zamilsteel.co.in/img/vp/louvers-1.png">Light Green</option>
+        <option value="https://zamilsteel.co.in/img/vp/louvers-2.png">Green</option>
+        <option value="https://zamilsteel.co.in/img/vp/louvers-3.png">White</option>
+        <option value="https://zamilsteel.co.in/img/vp/louvers-4.png">Parrot Green</option>
+        <option value="https://zamilsteel.co.in/img/vp/louvers-5.png">Cyan</option>
+        <option value="https://zamilsteel.co.in/img/vp/louvers-6.png">Red</option>
+        <option value="https://zamilsteel.co.in/img/vp/louvers-7.png">Dark Blue</option>
+        <option value="https://zamilsteel.co.in/img/vp/louvers-8.png">Blue</option>
+      </select>
+
+      <label for="roofms-selection">Roofms</label>
+      <select id="roofms-selection">
+        <option>--</option>
+        <option value="https://zamilsteel.co.in/img/vp/roofms-1.png">Light Green</option>
+        <option value="https://zamilsteel.co.in/img/vp/roofms-2.png">Green</option>
+        <option value="https://zamilsteel.co.in/img/vp/roofms-3.png">White</option>
+        <option value="https://zamilsteel.co.in/img/vp/roofms-4.png">Parrot Green</option>
+        <option value="https://zamilsteel.co.in/img/vp/roofms-5.png">Cyan</option>
+        <option value="https://zamilsteel.co.in/img/vp/roofms-6.png">Red</option>
+        <option value="https://zamilsteel.co.in/img/vp/roofms-7.png">Dark Blue</option>
+        <option value="https://zamilsteel.co.in/img/vp/roofms-8.png">Blue</option>
+      </select>
+
+      <label for="rvent-selection">Rvent</label>
+      <select id="rvent-selection">
+        <option>--</option>
+        <option value="https://zamilsteel.co.in/img/vp/rvent-1.png">Light Green</option>
+        <option value="https://zamilsteel.co.in/img/vp/rvent-2.png">Green</option>
+        <option value="https://zamilsteel.co.in/img/vp/rvent-3.png">White</option>
+        <option value="https://zamilsteel.co.in/img/vp/rvent-4.png">Parrot Green</option>
+        <option value="https://zamilsteel.co.in/img/vp/rvent-5.png">Cyan</option>
+        <option value="https://zamilsteel.co.in/img/vp/rvent-6.png">Red</option>
+        <option value="https://zamilsteel.co.in/img/vp/rvent-7.png">Dark Blue</option>
+        <option value="https://zamilsteel.co.in/img/vp/rvent-8.png">Blue</option>
+      </select>
+
+      <label for="shutter-selection">Shutter</label>
+      <select id="shutter-selection">
+        <option>--</option>
+        <option value="https://zamilsteel.co.in/img/vp/shutter-1.png">Light Green</option>
+        <option value="https://zamilsteel.co.in/img/vp/shutter-2.png">Green</option>
+        <option value="https://zamilsteel.co.in/img/vp/shutter-3.png">White</option>
+        <option value="https://zamilsteel.co.in/img/vp/shutter-4.png">Parrot Green</option>
+        <option value="https://zamilsteel.co.in/img/vp/shutter-5.png">Cyan</option>
+        <option value="https://zamilsteel.co.in/img/vp/shutter-6.png">Red</option>
+        <option value="https://zamilsteel.co.in/img/vp/shutter-7.png">Dark Blue</option>
+        <option value="https://zamilsteel.co.in/img/vp/shutter-8.png">Blue</option>
+      </select>
+
+      <!-- <label for="canopy-sheeting">Canopy Sheeting</label>
+      <select id="canopy-sheeting">
+        <option>Frost White</option>
+        <option>Silver</option>
+        <option>Black</option>
+      </select>
+
+      <label for="canopy-roof">Canopy Roof Sheeting</label>
+      <select id="canopy-roof">
+        <option>-- Select --</option>
+        <option>Option 1</option>
+        <option>Option 2</option>
+      </select> -->
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script>
+    // // Select the dropdown and image
+    // const wallSheetDropdown = document.getElementById("wall-sheeting");
+    // const WsheetImage = document.getElementById("WsheetToSwap");
+
+    // // Event Listener for Wall Sheeting Dropdown
+    // wallSheetDropdown.addEventListener("change", function () {
+    //   const selectedValue = wallSheetDropdown.value; // Get selected option value (image URL)
+    //   WsheetImage.src = selectedValue; // Update image src
+    // });
+
+
+    function updateImage(dropdownId, imageId) {
+      const dropdown = document.getElementById(dropdownId);
+      const image = document.getElementById(imageId);
+
+      dropdown.addEventListener("change", function () {
+        const selectedValue = dropdown.value; // Get selected option value
+        image.src = selectedValue; // Update image src
+      });
+    }
+
+    // Initialize dropdowns and images
+    updateImage("wall-sheeting", "WsheetToSwap");
+    updateImage("roof-sheeting", "RsheetToSwap");
+    updateImage("crs-selection", "crs");
+    updateImage("csheet-selection", "csheet");
+    updateImage("downspouts-selection", "downspouts");
+    updateImage("louvers-selection", "louvers");
+    updateImage("roofms-selection", "roofms");
+    updateImage("rvent-selection", "rvent");
+    updateImage("shutter-selection", "shutter"); 
+  </script>
+</body>
+
+</html>
